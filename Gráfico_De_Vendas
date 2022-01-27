@@ -6,25 +6,21 @@ Vendas = list()
 Temp_Mes_e_Valor = list()
 Mes_e_Valor = list()
 
-Mes_Completo = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro',
-                'Outubro', 'Novembro', 'Dezembro']
+Mes_Completo = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
 Mes_Abreviado = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']
 
 
 def Numero_Mes(Mes):
     for Nome_Meses in enumerate(Mes_Abreviado):
-
         if Nome_Meses[1] == Mes:
             Numero_M = Nome_Meses[0] + 1
 
     return Numero_M
 
 
-Começar = str(
-    input('Digite o número do mês que deseja começar (Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez): '))
+Começar = str(input('Digite o número do mês que deseja começar (Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez): '))
 while Começar not in Mes_Abreviado:
-    Começar = str(input(
-        'Erro Na Digitação. Digite o número do mês que deseja começar (Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez): '))
+    Começar = str(input('Erro Na Digitação. Digite o número do mês que deseja começar (Jan, Fev, Mar, Abr, Mai, Jun, Jul, Ago, Set, Out, Nov, Dez): '))
 
 Mes_Dos_Valores = Maior_Valor = Menor_Valor = 0
 Mes_Copia = Copia_Mes_Contagem = Numero_Mes(Começar)
@@ -35,8 +31,7 @@ while True:
         Mes_Copia = 0
         Copia_Mes_Contagem = 0
 
-    Valor_Das_Vendas = str(
-        input(f'Valor das vendas foi feitas no mês de {Mes_Completo[Mes_Copia - 1]}: R$')).strip().replace(',', '.')
+    Valor_Das_Vendas = str(input(f'Valor das vendas foi feitas no mês de {Mes_Completo[Mes_Copia - 1]}: R$')).strip().replace(',', '.')
     Temp_Mes_e_Valor.append(Mes_Completo[Mes_Copia - 1])
 
     try:
